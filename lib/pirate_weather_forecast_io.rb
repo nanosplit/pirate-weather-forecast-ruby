@@ -1,5 +1,5 @@
-require 'forecast_io/configuration'
-require 'forecast_io/version'
+require 'pirate_weather_forecast_io/configuration'
+require 'pirate_weather_forecast_io/version'
 
 require 'hashie'
 require 'multi_json'

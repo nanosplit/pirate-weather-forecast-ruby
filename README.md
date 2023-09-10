@@ -3,9 +3,12 @@
 [Pirate Weather forecast.io](https://pirateweather.net/en/latest/) API wrapper in Ruby, forked from
 [Dark Sky's forecast.io](https://github.com/darkskyapp/forecast-ruby).
 
+Pirate Weather aims to be a drop-in replacement for Apple's (now) non-free Dark Sky API. Similarly, this
+project's goal is to provide a drop-in replacement for the [Ruby Dark Sky API wrapper](https://github.com/darkskyapp/forecast-ruby).
+
 ## Installation
 
-`gem install forecast_io`
+`gem install pirate_weather_forecast_io`
 
 or in your `Gemfile`
 

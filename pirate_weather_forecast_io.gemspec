@@ -1,18 +1,18 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
 
-require 'forecast_io/version'
+require 'pirate_weather_forecast_io/version'
 
 Gem::Specification.new do |s|
-  s.name        = "forecast_io"
+  s.name        = "pirate_weather_forecast_io"
   s.version     = ForecastIO::VERSION
-  s.authors     = ["David Czarnecki"]
-  s.email       = ["me@davidczarnecki.com"]
-  s.homepage    = "https://github.com/darkskyapp/forecast-ruby"
+  s.authors     = ["Alex Cochran"]
+  s.email       = ["acochran50@gmail.com"]
+  s.homepage    = "https://github.com/alexcochran/pirate-weather-forecast-ruby"
   s.summary     = %q{forecast.io API wrapper in Ruby}
   s.description = %q{forecast.io API wrapper in Ruby}
 
-  s.rubyforge_project = "forecast_io"
+  s.rubyforge_project = "pirate_weather_forecast_io"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
