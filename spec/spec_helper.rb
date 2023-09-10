@@ -1,5 +1,5 @@
 require 'rspec'
-require 'pirate_weather_forecast_io'
+require 'pirate_weather_forecast_ruby'
 
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 

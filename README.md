@@ -1,4 +1,4 @@
-# pirate_weather_forecast_io
+# pirate_weather_forecast_ruby
 
 [Pirate Weather forecast.io](https://pirateweather.net/en/latest/) API wrapper in Ruby, forked from
 [Dark Sky's forecast.io](https://github.com/darkskyapp/forecast-ruby).
@@ -8,12 +8,12 @@ project's goal is to provide a drop-in replacement for the [Ruby Dark Sky API wr
 
 ## Installation
 
-`gem install pirate_weather_forecast_io`
+`gem install pirate_weather_forecast_ruby`
 
 or in your `Gemfile`
 
 ```ruby
-gem 'pirate_weather_forecast_io'
+gem 'pirate_weather_forecast_ruby'
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ gem 'pirate_weather_forecast_io'
 Make sure you require the library.
 
 ```ruby
-require 'pirate_weather_forecast_io'
+require 'pirate_weather_forecast_ruby'
 ```
 
 You need to set an API key before you can make requests to the API. Grab one from
