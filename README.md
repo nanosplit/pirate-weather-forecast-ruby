@@ -1,6 +1,7 @@
-# forecast_io
+# pirate_weather_forecast_io
 
-[forecast.io](https://darksky.net/dev/docs) API wrapper in Ruby.
+[Pirate Weather forecast.io](https://pirateweather.net/en/latest/) API wrapper in Ruby, forked from
+[Dark Sky's forecast.io](https://github.com/darkskyapp/forecast-ruby).
 
 ## Installation
 
@@ -9,7 +10,7 @@
 or in your `Gemfile`
 
 ```ruby
-gem 'forecast_io'
+gem 'pirate_weather_forecast_io'
 ```
 
 ## Usage
@@ -17,10 +18,11 @@ gem 'forecast_io'
 Make sure you require the library.
 
 ```ruby
-require 'forecast_io'
+require 'pirate_weather_forecast_io'
 ```
 
-You will need to set your API key before you can make requests to the [forecast.io](https://developer.darkskyapp.com/docs/v2) API.
+You need to set an API key before you can make requests to the API. Grab one from
+[Pirate Weather](https://pirateweather.net/en/latest/).
 
 ```ruby
 ForecastIO.configure do |configuration|
@@ -42,7 +44,7 @@ Valid options in the `options` hash are:
 * `:params` - Query parameters that can contain the following:
   * `:jsonp` - JSONP callback.
   * `:units` - Return the API response in SI units, rather than the default Imperial units.
-  * `:exclude` - "Exclude some number of data blocks from the API response. This is useful for reducing latency and saving cache space. [blocks] should be a comma-delimeted list (without spaces) of any of the following: currently, minutely, hourly, daily, alerts, flags." (via [v2 docs](https://developer.forecast.io/docs/v2#changelog))
+  * `:exclude` - "Exclude some number of data blocks from the API response. This is useful for reducing latency and saving cache space. [blocks] should be a comma-delimeted list (without spaces) of any of the following: currently, minutely, hourly, daily, alerts, flags." (via Dark Sky's [v2 docs](https://developer.forecast.io/docs/v2#changelog))
 
 Get the current forecast:
 
@@ -70,54 +72,10 @@ forecast.latitude
 forecast.longitude
 ```
 
-Please refer to the [forecast.io](https://developer.darkskyapp.com/docs/v2) API documentation for more information on the full response properties.
+## Contributing
 
-The HTTP requests are made with [Faraday](https://github.com/lostisland/faraday), which uses `Net::HTTP` by default. Changing the adapter is easy. We will use typhoeus as an example.
+⏳
 
-Make sure to include the typhoeus gem in your `Gemfile`:
+## [License](./LICENSE)
 
-```ruby
-gem 'typhoeus'
-```
-
-```ruby
-require 'typhoeus/adapters/faraday'
-
-Faraday.default_adapter = :typhoeus
-```
-
-Alternatively:
-
-```ruby
-require 'typhoeus/adapters/faraday'
-
-ForecastIO.connection = Faraday.new do |builder|
-  builder.adapter :typhoeus
-end
-```
-
-You can also customise the default parameters passed through on each API call:
-
-```ruby
-ForecastIO.default_params = {units: 'si'}
-
-# or
-
-ForecastIO.configure do |configuration|
-  configuration.default_params = {units: 'si'}
-end
-```
-
-## Contributing to forecast_io
-
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
-* Fork the project
-* Start a feature/bugfix branch
-* Commit and push until you are happy with your contribution
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
-
-## Copyright
-
-Copyright (c) 2013-2018 David Czarnecki. See LICENSE.txt for further details.
+Copyright (c) 2023 Alex Cochran
