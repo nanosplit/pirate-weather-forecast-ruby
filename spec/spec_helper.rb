@@ -1,13 +1,15 @@
-require 'rspec'
-require 'pirate_weather_forecast_ruby'
+# frozen_string_literal: true
 
-Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
+require "rspec"
+require "pirate_weather_forecast_ruby"
 
-require 'vcr'
-require 'typhoeus/adapters/faraday'
+Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].sort.each { |f| require f }
+
+require "vcr"
+require "faraday/typhoeus"
 
 VCR.configure do |c|
-  c.cassette_library_dir = 'spec/cassettes'
+  c.cassette_library_dir = "spec/cassettes"
   c.hook_into :typhoeus
   c.allow_http_connections_when_no_cassette = false
 end

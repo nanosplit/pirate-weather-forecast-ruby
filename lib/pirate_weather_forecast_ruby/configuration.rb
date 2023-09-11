@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module ForecastIO
   module Configuration
     # Default API endpoint
-    DEFAULT_FORECAST_IO_API_ENDPOINT = 'https://api.pirateweather.net'
+    DEFAULT_FORECAST_IO_API_ENDPOINT = "https://api.pirateweather.net"
 
     # Forecast API endpoint
     attr_writer :api_endpoint

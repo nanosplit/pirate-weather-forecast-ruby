@@ -1,9 +1,11 @@
-require 'pirate_weather_forecast_ruby/configuration'
-require 'pirate_weather_forecast_ruby/version'
+# frozen_string_literal: true
 
-require 'hashie'
-require 'multi_json'
-require 'faraday'
+require "pirate_weather_forecast_ruby/configuration"
+require "pirate_weather_forecast_ruby/version"
+
+require "hashie"
+require "multi_json"
+require "faraday"
 
 module ForecastIO
   extend Configuration
@@ -22,9 +24,9 @@ module ForecastIO
 
       forecast_response = get(forecast_url, options[:params])
 
-      if forecast_response.success?
-        return Hashie::Mash.new(MultiJson.load(forecast_response.body))
-      end
+      return unless forecast_response.success?
+
+      Hashie::Mash.new(MultiJson.load(forecast_response.body))
     end
 
     # Build or get an HTTP connection object.
@@ -35,9 +37,7 @@ module ForecastIO
     # Set an HTTP connection object.
     #
     # @param connection Connection object to be used.
-    def connection=(connection)
-      @connection = connection
-    end
+    attr_writer :connection
 
     private
 
