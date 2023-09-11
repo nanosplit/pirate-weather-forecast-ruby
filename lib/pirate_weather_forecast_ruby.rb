@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require "pirate_weather_forecast_ruby/configuration"
-require "pirate_weather_forecast_ruby/version"
+require_relative "pirate_weather_forecast_ruby/configuration"
+require_relative "pirate_weather_forecast_ruby/version"
 
 require "hashie"
 require "multi_json"
