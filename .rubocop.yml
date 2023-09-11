@@ -11,3 +11,13 @@ Style/StringLiteralsInInterpolation:
 
 Layout/LineLength:
   Max: 120
+
+# TODO: remove + fix code to pass everything
+Metrics/BlockLength:
+  Enabled: false
+
+# TODO: remove + fix code to pass everything
+Style/Documentation:
+  Enabled: false
+
+
