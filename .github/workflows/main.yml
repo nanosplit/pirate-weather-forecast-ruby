@@ -1,5 +1,7 @@
 name: Ruby
 
+runs-on: ubuntu-latest
+
 on:
   push:
     branches:
