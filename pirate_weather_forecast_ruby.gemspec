@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.summary     = "forecast.io API wrapper in Ruby"
   spec.description = "forecast.io API wrapper in Ruby"
 
-  spec.required_ruby_version = ">= 3.2.2"
+  spec.required_ruby_version = ">= 2.5.3"
 
   spec.rubyforge_project = "pirate_weather_forecast_ruby"
 
